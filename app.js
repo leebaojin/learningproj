@@ -3,7 +3,8 @@ var url = require('url');
 var fs = require('fs');
 var events = require('events');
 let outdate = require('./myDateModule.js');
-let weatherData = require('./myWeatherModule.js')
+let weatherData = require('./myWeatherModule.js');
+var locationModule = require('./locationModule.js');
 
 var pageMissing = function(){
     console.log(outdate.dateTimeOut() + "[ERROR] Page Cannot Be Found");
@@ -44,7 +45,7 @@ http.createServer(function(req,res){
 function weather(req,res){
     //This is for the weather
     let resultData = '';
-    let searchArr = ['Ang Mo Kio','Changi','Sengkang','Pasir Ris'];
+    let searchArr = locationModule.searchLocation;
     let urlData = url.parse(req.url,true).query;
     
     if(urlData["loc"] !== undefined){

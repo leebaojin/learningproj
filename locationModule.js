@@ -1,0 +1,1 @@
+exports.searchLocation=['Ang Mo Kio','Changi','Pasir Ris','Sengkang','Tampines'];
