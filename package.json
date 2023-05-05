@@ -1,0 +1,11 @@
+{
+    "name": "Simple Node App",
+    "version": "1.0.0",
+    "description": "Basic Node js app",
+    "author": "Bao Jin <leebaojin@gmail.com>",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js"
+    }
+
+  }
