@@ -63,6 +63,16 @@ function processData(jsonData,searchArr){
     return result;
 }
 
+function processAllData(jsonData){
+  let result = [];
+  for(let j=0;j<forecast.length;j++){
+    var resultData = {loc:searchArr[i],forecast:forecast[j].forecast};
+    result.push(resultData);
+
+  }
+  return result;
+}
+
 exports.getWeather=function(loc){
     return requestWeather(loc);
 }

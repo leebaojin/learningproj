@@ -58,7 +58,7 @@ function weather(req,res){
     p.then((result)=>{
         resultData = result;
         let weatherData = '';
-        for(let i=0;i<searchArr.length;i++){
+        for(let i=0;i<resultData.length;i++){
             weatherData += "<p>"+resultData[i].loc+" : "+resultData[i].forecast+"</p>"
         }
 
